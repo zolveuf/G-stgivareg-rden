@@ -11,20 +11,10 @@ CShamburgerMenu.addEventListener('click', function() {
     ariaExpanded();
 });
 
-// checks the value of aria expanded on the cs-ul and changes it accordingly whether it is expanded or not 
-function ariaExpanded() {
-    const csUL = document.querySelector('#cs-expanded');
-    const csExpanded = csUL.getAttribute('aria-expanded');
 
-    if (csExpanded === 'false') {
-        csUL.setAttribute('aria-expanded', 'true');
-    } else {
-        csUL.setAttribute('aria-expanded', 'false');
-    }
-}
 
 // mobile nav toggle code
-const dropDowns = Array.from(document.querySelectorAll('#cs-navigation .cs-dropdown'));
+const dropDowns = Array.from(document.querySelectorAll(' .cs-dropdown'));
     for (const item of dropDowns) {
         const onClick = () => {
         item.classList.toggle('cs-active')
@@ -41,4 +31,6 @@ document.querySelector('#cs-navigation').classList.add('scroll')
     document.querySelector('#cs-navigation').classList.remove('scroll')
     }
 });
+
+
                             
